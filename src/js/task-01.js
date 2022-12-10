@@ -1,13 +1,13 @@
-console.log(
-  "Number of categories:",
-  document.getElementById("categories").getElementsByClassName("item").length
-);
+const listItems = document
+  .getElementById("categories")
+  .getElementsByClassName("item");
+console.log("Number of categories:", `${listItems.length}`);
 
-// const listItemsElements = document.querySelectorAll(".item");
+const categoryElement = [...listItems]
+  .map(
+    (categories) => `Category: ${categories.children[0].textContent} 
+Element: ${categories.children[1].children.length}`
+  )
+  .join("\n");
 
-// console.log("Number of categories:", `${listItemsElements.length}`);
-
-// const allCategoriesArray = listItemsElements.forEach((el) => {
-//   console.log("Category:", `${el.querySelector("h2").textContent}`);
-//   console.log("Elements:", `${el.querySelectorAll("li").length}`);
-// });
+console.log(categoryElement);
