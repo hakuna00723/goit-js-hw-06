@@ -5,6 +5,6 @@ elInput.addEventListener("input", (event) => {
   elOutput.textContent = event.currentTarget.value;
 
   if (elInput.value === "") {
-    return elOutput.textContent;
+    return (elOutput.textContent = "Anonymous");
   }
 });
