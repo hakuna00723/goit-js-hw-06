@@ -8,8 +8,8 @@ registerForm.addEventListener("submit", (event) => {
   if (email.value === "" || password.value === "") {
     return alert("Всі поля повинні бути заповнені");
   }
-  console.log("Emeil: ", email.value);
-  console.log("Password: ", password.value);
+
+  console.log({ email: email.value, password: password.value });
 
   event.currentTarget.reset();
 });
