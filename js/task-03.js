@@ -21,7 +21,7 @@ gallery.style.gap = "10px";
 const imagesMarkup = images
   .map(
     ({ url, alt }) =>
-      `<li><img height =150px, width = 250px, src=${url}, alt=${alt}></img></li>`
+      `<li><img height =150px, width = 250px, src=${url}, alt="${alt}"></img></li>`
   )
   .join("");
 
